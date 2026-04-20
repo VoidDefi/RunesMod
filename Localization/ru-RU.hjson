@@ -1,0 +1,474 @@
+Mods: {
+	RunesMod: {
+		Items: {
+			LifeMatter: {
+				DisplayName: Материя жизни
+				Tooltip: ""
+			}
+
+			ManaMatter: {
+				DisplayName: Материя манны
+				Tooltip: ""
+			}
+
+			VoidFragment: {
+				DisplayName: Осколок Пустоты
+				Tooltip: Часть чего-то потустороннего
+			}
+
+			DullEctoplasm: {
+				DisplayName: Тусклая эктоплазма
+				Tooltip:
+					'''
+					Вязкая, бледная субстанция, не когда 
+					была чей-то душой, потускневшей и утратившей 
+					большую часть своей энергии во время 
+					безплотных скитаний по этому миру
+					'''
+			}
+
+			SlotProtector: {
+				DisplayName: Защитник слота
+				Tooltip: Защищает слот инвентаря от заполнения, чтобы можно было продолжать кастовать заклинания.
+			}
+
+			NoneProtector: {
+				DisplayName: None Protector
+				Tooltip: ""
+			}
+
+			PieceOfWood: {
+				DisplayName: Кусок дерева
+				Tooltip: ""
+			}
+
+			CinnabarItem: {
+				DisplayName: Киноварь
+				Tooltip: ""
+			}
+
+			SulfurItem: {
+				DisplayName: Сера
+				Tooltip: ""
+			}
+
+			LifeAccumulatorCrystal: {
+				DisplayName: Кристалл жизни-накопителя
+				Tooltip: Способен накапливать жизнь. Используются для создания артефактов
+			}
+
+			ManaAccumulatorCrystal: {
+				DisplayName: Кристалл мана-накопителя
+				Tooltip: Способен накапливать ману. Используются для создания артефактов
+			}
+
+			RockCrystalItem: {
+				DisplayName: Горный хрусталь
+				Tooltip: ""
+			}
+
+			RockCrystalOreItem: {
+				DisplayName: Блок горного хрусталя
+				Tooltip: ""
+			}
+
+			VoidManaCrystal: {
+				DisplayName: Кристалл пустой манны
+				Tooltip:
+					'''
+					Навсегда даёт людям возможность использовать заклинания. 
+					'Сможет воспользоваться только достойный!'
+					'''
+			}
+
+			MortarItem: {
+				DisplayName: Ступка
+				Tooltip: ""
+			}
+
+			ArtifactWorkshopItem: {
+				DisplayName: Артефакторская мастерская
+				Tooltip: ""
+			}
+
+			SimpleAlchemicalTableItem: {
+				DisplayName: Простой алхимический стол
+				Tooltip: ""
+			}
+
+			MirrorBlank: {
+				DisplayName: Заготовка под Зеркало
+				Tooltip: Основа зеркальных Артефактов
+			}
+
+			PrismOfIcerianCrystal: {
+				DisplayName: Призма айсрийского хрусталя
+				Tooltip:
+					'''
+					Качественный хрусталь, ценится магами-артефакторами за его свойства.
+					Обычно используется в зеркалах-артефактов, так как может служить 
+					провадником заклинаний илюзий и телепортации.
+					'Сверкает и переливается на свету'
+					'''
+			}
+
+			BrokenIceMirror: {
+				DisplayName: Сломанное ледяное зеркало
+				Tooltip: Можно открыть
+			}
+
+			BrokenMagicMirror: {
+				DisplayName: Сломанное магическое зеркало
+				Tooltip: Можно открыть
+			}
+
+			GlowingPowderItem: {
+				DisplayName: Светящийся порошок
+				Tooltip: Распространяет светящуюся грибницу
+			}
+
+			ClearWaterFlask: {
+				DisplayName: Колба с чистой водой
+				Tooltip: "'Теперь на 99.9% чище'"
+			}
+
+			Flask: {
+				DisplayName: Колба
+				Tooltip: ""
+			}
+
+			WaterFlask: {
+				DisplayName: Колба с водой
+				Tooltip: "'А в чём разница?'"
+			}
+
+			DistillerItem: {
+				DisplayName: Перегонный куб
+				Tooltip: ""
+			}
+
+			StasisChestItem: {
+				DisplayName: Стазис сундук
+				Tooltip: ""
+			}
+
+			BloodyPin: {
+				DisplayName: Окровавленная булавка
+				Tooltip: ""
+			}
+
+			BrainOfInfluence: {
+				DisplayName: Мозг влияния
+				Tooltip:
+					'''
+					Увеличивает концентрацию на 1.
+					Есть шанс создать иллюзию и уклоняться от атаки
+					Временно увеличивает шанс нанести критический удар после уклонения
+					Может после удара приводить ближайших противников в замешательство
+					'''
+			}
+
+			SulfurHelmet: {
+				SetBonus:
+					'''
+					Даёт невосприимчивость к дебафам: '{0}' и '{1}'.
+					Увеличивает урон стихии огня на {2}%.
+					Увеличивает прочность шитов на {3}%.
+					'''
+				DisplayName: Серный шлем
+				Tooltip: Увеличивает максимальный запас маны на {0}
+			}
+
+			SulfurBreastplate: {
+				DisplayName: Серный нагрудник
+				Tooltip: Увеличивает максимальный запас маны на {0}
+			}
+
+			SulfurLeggings: {
+				DisplayName: Серные поножи
+				Tooltip: Увеличивает скорость передвижения на {0}%
+			}
+
+			SulfurBar: {
+				DisplayName: Серный слиток
+				Tooltip:
+					'''
+					Примеси серы сделали сплав хрупким,
+					но он, взамен, приобрёл скрытую силу.
+					'Пылает внутренним жаром'
+					'''
+			}
+
+			CinnabarBar: {
+				DisplayName: Слиток киновари
+				Tooltip:
+					'''
+					Примеси киновари сделали сплав хрупким,
+					но он, взамен, приобрёл скрытую силу.
+					'Отголоски чего-то древнего теплятся внутри него'
+					'''
+			}
+
+			CinnabarCrown: {
+				SetBonus: Mods.RunesMod.Items.CinnabarCrown.SetBonus
+				DisplayName: Киноварьная карона
+				Tooltip: ""
+			}
+
+			CinnabarBreastplate: {
+				DisplayName: Киноварьный нагрудник
+				Tooltip: ""
+			}
+
+			CinnabarLeggings: {
+				DisplayName: Киноварьные поножи
+				Tooltip: Увеличивает скорость передвижения на {0}%
+			}
+
+			UniversalRobe: {
+				// DisplayName: Universal robe
+				// Tooltip: ""
+			}
+
+			CinnabarPickaxe: {
+				DisplayName: Киноварьная кирка
+				Tooltip: ""
+			}
+
+			SulfurPickaxe: {
+				DisplayName: Серная кирка
+				Tooltip: ""
+			}
+
+			DarkCinnabarBrick: {
+				DisplayName: Тёмный киноврьный кирпичь
+				Tooltip: ""
+			}
+
+			LightCinnabarBrick: {
+				DisplayName: Светлый киноврьный кирпичь
+				Tooltip: ""
+			}
+
+			SulfurBrick: {
+				DisplayName: Серный кирпичь
+				Tooltip: ""
+			}
+
+			OlmItem: {
+				DisplayName: Олм
+				Tooltip: ""
+			}
+
+			LifeCrystalFinderItem: {
+				DisplayName: Поисковой механизм кристаллов жизни
+				Tooltip: ""
+			}
+
+			ScrollFireBall: {
+				// DisplayName: Scroll Fire Ball
+				// Tooltip: ""
+			}
+
+			ScrollFire: {
+				DisplayName: Свиток огня
+				Tooltip: Используйте, чтобы изучить заклиная
+			}
+
+			ScrollEarth: {
+				DisplayName: Свиток сталлактита
+				Tooltip: Используйте, чтобы изучить заклиная
+			}
+
+			ScrollFrostyBreath: {
+				DisplayName: Свиток морозного дыхания
+				Tooltip: Используйте, чтобы изучить заклиная
+			}
+
+			ScrollLighting: {
+				DisplayName: Свиток молнии
+				Tooltip: Используйте, чтобы изучить заклиная
+			}
+
+			ScrollWaterSplit: {
+				DisplayName: Свиток водного плевка
+				Tooltip: Используйте, чтобы изучить заклиная
+			}
+
+			ScrollBlood: {
+				DisplayName: Свиток крови
+				Tooltip: Используйте, чтобы изучить заклиная
+			}
+		}
+
+		PotionQualities: {
+			Normal: ""
+			ExpiredFetid: Зловонное
+			ExpiredStale: Затхлое
+			ExpiredSedimentary: Осадочное
+			ExpiredTarnished: Потускневшее
+			ExpiredOld: Старое
+			Defective: Бракованное
+			Doubtful: Сомнительное
+			Clear: Чистое
+			Perfect: Идеальное
+			NormalDescription: ""
+			ExpiredFetidDescription: Фу, какая мерзость! Это вообще можно пить?!
+			ExpiredStaleDescription: Пахнет... явно не розами.
+			ExpiredSedimentaryDescription: На дне осел какой-то странный осадок. Так и должно быть?
+			ExpiredTarnishedDescription: Мне кажется, оно должно было быть ярче...
+			ExpiredOldDescription:
+				'''
+				Говорят: «чем больше выдержка, тем лучше вино». Интересно, 
+				к зельям это тоже относится?
+				'''
+			DefectiveDescription: У алхимика, сварившего это, был явно не лучший день.
+			DoubtfulDescription: Не думаю, что от него стоит ждать чего-то особенного.
+			ClearDescription: Кристально прозрачное... но чувствуется, что могло быть лучше.
+			PerfectDescription: Сварено из лучших ингредиентов и доведено до совершенства.
+		}
+
+		Buffs: {
+			Dizziness: {
+				DisplayName: Головокружение
+				Description: Снижена концентрация
+			}
+
+			FlayedSkin: {
+				DisplayName: Содранная кожа
+				Description: У вас нет кожи!
+			}
+
+			Nausea: {
+				DisplayName: Тошнота
+				Description: Уменьшена скорость передвижения
+			}
+
+			HighTemperature: {
+				DisplayName: Высокая температура
+				Description: Mods.RunesMod.Buffs.HighTemperature.Description
+			}
+
+			StoneEntrails: {
+				DisplayName: Каменные внутренности
+				Description: Mods.RunesMod.Buffs.StoneEntrails.Description
+			}
+		}
+
+		NPCs: {
+			ABunchOfLife.DisplayName: Сгусток жизни
+			ABunchOfMana.DisplayName: Сгусток маны
+			Olm.DisplayName: Олм
+			TNP.DisplayName: ТНП
+			// DeadGuard.DisplayName: Dead Guard
+			// DeadGuardHand.DisplayName: Dead Guard Hand
+		}
+
+		Projectiles: {
+			FireBall.DisplayName: Огненный шар
+			Stalactite.DisplayName: Сталактит
+			FrostyMist.DisplayName: Морозный туман
+			Snowflake.DisplayName: Снежинка
+			GlowPowder.DisplayName: Светящийся порошёк
+			GlowingPowder.DisplayName: Светящийся порошок
+			LightingProjectile.DisplayName: Молния
+			VoidRift.DisplayName: Разлом пустоты
+			WaterSpit.DisplayName: Водный плевок
+			// LifeCrystalFinder.DisplayName: Life Crystal Finder
+			// Tombstone.DisplayName: Tombstone
+			// BloodBolt.DisplayName: Blood Bolt
+		}
+
+		Tiles: {
+			Cinnabar.MapEntry: Киноварь
+			Sulfur.MapEntry: Сера
+			RockCrystal.MapEntry: Горный хрусталь
+			RockCrystalOre.MapEntry: Блок горного хрусталя
+			RockCrystalInStone.MapEntry: Горный хрусталь в камне
+			Mortar.MapEntry: Ступка
+			ArtifactWorkshop.MapEntry: Артефакторская мастерская
+			SimpleAlchemicalTable.MapEntry: Простой алхимический стол
+			Distiller.MapEntry: Перегонный куб
+			StasisChest.MapEntry: Стазис сундук
+		}
+
+		Conditions: {
+			Mana: мана
+			Mana1: маны
+		}
+
+		DamageClasses.TrueMagic.DisplayName: True Magic
+
+		Spells: {
+			BloodBoltSpell: {
+				DisplayName: Выстрел крови
+				Tooltip: ""
+			}
+
+			FireShieldSpell: {
+				DisplayName: Огненый шит
+				Tooltip: ""
+			}
+
+			GemsSpell: {
+				DisplayName: Gems Spell
+				Tooltip: ""
+			}
+
+			StalactiteSpell: {
+				DisplayName: Сталактит
+				Tooltip: ""
+			}
+
+			LightingSpell: {
+				DisplayName: Молния
+				Tooltip: ""
+			}
+
+			FireBallSpell: {
+				DisplayName: Огненый шар
+				Tooltip: ""
+			}
+
+			FrostyBreathSpell: {
+				DisplayName: Морозное дыхание
+				Tooltip: ""
+			}
+
+			WaterSpitSpell: {
+				DisplayName: Водный плевок
+				Tooltip: ""
+			}
+
+			Spell: {
+				DisplayName: Spell
+				Tooltip: ""
+			}
+
+			TestSpell1: {
+				DisplayName: Test Spell1
+				Tooltip: ""
+			}
+
+			TestSpell2: {
+				DisplayName: Test Spell2
+				Tooltip: ""
+			}
+
+			TestSpell3: {
+				DisplayName: Test Spell3
+				Tooltip: ""
+			}
+
+			TestSpell4: {
+				DisplayName: Test Spell4
+				Tooltip: ""
+			}
+
+			TestSpell5: {
+				DisplayName: Test Spell5
+				Tooltip: ""
+			}
+		}
+	}
+}

@@ -1,0 +1,462 @@
+Mods: {
+	RunesMod: {
+		Items: {
+			LifeMatter: {
+				DisplayName: Life matter
+				Tooltip: ""
+			}
+
+			ManaMatter: {
+				DisplayName: Mana matter
+				Tooltip: ""
+			}
+
+			VoidFragment: {
+				DisplayName: Void fragment
+				Tooltip: Part of something otherworldly
+			}
+
+			DullEctoplasm: {
+				DisplayName: Dull Ectoplasm
+				Tooltip:
+					'''
+					A viscous, pale substance that was 
+					once someone's soul, faded and lost 
+					most of its energy during its disembodied 
+					wanderings through this world.
+					'''
+			}
+
+			SlotProtector: {
+				DisplayName: Slot Protector
+				Tooltip: Prevents an inventory slot from filling up so you can continue casting spells.
+			}
+
+			NoneProtector: {
+				DisplayName: None Protector
+				Tooltip: ""
+			}
+
+			PieceOfWood: {
+				DisplayName: Piece of wood
+				Tooltip: ""
+			}
+
+			CinnabarItem: {
+				DisplayName: Cinnabar
+				Tooltip: ""
+			}
+
+			SulfurItem: {
+				DisplayName: Sulfur
+				Tooltip: ""
+			}
+
+			LifeAccumulatorCrystal: {
+				DisplayName: Life accumulator crystal
+				Tooltip: Capable of accumulating life. Used to create artifacts.
+			}
+
+			ManaAccumulatorCrystal: {
+				DisplayName: Mana accumulator crystal
+				Tooltip: Capable of accumulating mana. Used to create artifacts.
+			}
+
+			RockCrystalItem: {
+				DisplayName: Rock crystal
+				Tooltip: ""
+			}
+
+			RockCrystalOreItem: {
+				DisplayName: Rock crystal block
+				Tooltip: ""
+			}
+
+			VoidManaCrystal: {
+				DisplayName: Void mana crystal
+				Tooltip:
+					'''
+					Permanently grants people the ability to use spells. 
+					'Only the worthy can use it!'
+					'''
+			}
+
+			MortarItem: {
+				DisplayName: Mortar
+				Tooltip: ""
+			}
+
+			ArtifactWorkshopItem: {
+				DisplayName: Artifact Workshop
+				Tooltip: ""
+			}
+
+			SimpleAlchemicalTableItem: {
+				DisplayName: Simple Alchemical Table
+				Tooltip: ""
+			}
+
+			MirrorBlank: {
+				DisplayName: Mirror Blank
+				Tooltip: The basis of mirror artifacts
+			}
+
+			PrismOfIcerianCrystal: {
+				DisplayName: Prism Of Icerian Crystal
+				Tooltip:
+					'''
+					High-quality crystal, prized by artifact mages for its properties.
+					Commonly used in artifact mirrors, as it can serve as a channel for 
+					illusion and teleportation spells.
+					'Sparkles and shimmers in the light.'
+					'''
+			}
+
+			BrokenIceMirror: {
+				DisplayName: Broken ice mirror
+				Tooltip: ""
+			}
+
+			BrokenMagicMirror: {
+				DisplayName: Broken magic mirror
+				Tooltip: ""
+			}
+
+			GlowingPowderItem: {
+				DisplayName: Glowing powder
+				Tooltip: Spreads glowous mycelium
+			}
+
+			ClearWaterFlask: {
+				DisplayName: Clear water flask
+				Tooltip: "'Now 99.9% cleaner'"
+			}
+
+			Flask: {
+				DisplayName: Flask
+				Tooltip: ""
+			}
+
+			WaterFlask: {
+				DisplayName: Water flask
+				Tooltip: "'What's the difference?'"
+			}
+
+			DistillerItem: {
+				DisplayName: Still
+				Tooltip: ""
+			}
+
+			StasisChestItem: {
+				DisplayName: Stasis chest
+				Tooltip: ""
+			}
+
+			BloodyPin: {
+				DisplayName: Bloody pin
+				Tooltip: ""
+			}
+
+			BrainOfInfluence: {
+				DisplayName: Brain of influence
+				Tooltip: ""
+			}
+
+			SulfurHelmet: {
+				SetBonus: Mods.RunesMod.Items.SulfurHelmet.SetBonus
+				DisplayName: Sulfur helmet
+				Tooltip: ""
+			}
+
+			SulfurBreastplate: {
+				DisplayName: Sulfur breastplate
+				Tooltip: ""
+			}
+
+			SulfurLeggings: {
+				DisplayName: Sulfur leggings
+				Tooltip: ""
+			}
+
+			SulfurBar: {
+				DisplayName: Sulfur bar
+				Tooltip:
+					'''
+					The sulfur impurities made the alloy brittle,
+					but in return, it acquired hidden strength.
+					'Burning with an inner heat'
+					'''
+			}
+
+			CinnabarBar: {
+				DisplayName: Cinnabar bar
+				Tooltip: ""
+			}
+
+			CinnabarCrown: {
+				SetBonus: Mods.RunesMod.Items.CinnabarCrown.SetBonus
+				DisplayName: Cinnabar crown
+				Tooltip: ""
+			}
+
+			CinnabarBreastplate: {
+				DisplayName: Cinnabar breastplate
+				Tooltip: ""
+			}
+
+			CinnabarLeggings: {
+				DisplayName: Cinnabar leggings
+				Tooltip: ""
+			}
+
+			UniversalRobe: {
+				DisplayName: Universal robe
+				Tooltip: ""
+			}
+
+			CinnabarPickaxe: {
+				DisplayName: Cinnabar pickaxe
+				Tooltip: ""
+			}
+
+			SulfurPickaxe: {
+				DisplayName: Sulfur pickaxe
+				Tooltip: ""
+			}
+
+			DarkCinnabarBrick: {
+				DisplayName: Dark cinnabar brick
+				Tooltip: ""
+			}
+
+			LightCinnabarBrick: {
+				DisplayName: Light cinnabar brick
+				Tooltip: ""
+			}
+
+			SulfurBrick: {
+				DisplayName: Sulfur brick
+				Tooltip: ""
+			}
+
+			OlmItem: {
+				DisplayName: Olm Item
+				Tooltip: ""
+			}
+
+			LifeCrystalFinderItem: {
+				DisplayName: Life Crystal Finder Item
+				Tooltip: ""
+			}
+
+			ScrollFireBall: {
+				DisplayName: Scroll Fire Ball
+				Tooltip: ""
+			}
+
+			ScrollFire: {
+				DisplayName: Scroll Fire
+				Tooltip: ""
+			}
+
+			ScrollEarth: {
+				DisplayName: Scroll Earth
+				Tooltip: ""
+			}
+
+			ScrollFrostyBreath: {
+				DisplayName: Scroll Frosty Breath
+				Tooltip: ""
+			}
+
+			ScrollLighting: {
+				DisplayName: Scroll Lighting
+				Tooltip: ""
+			}
+
+			ScrollWaterSplit: {
+				DisplayName: Scroll Water Split
+				Tooltip: ""
+			}
+
+			ScrollBlood: {
+				DisplayName: Scroll Blood
+				Tooltip: ""
+			}
+		}
+
+		PotionQualities: {
+			Normal: ""
+			ExpiredFetid: Fetid
+			ExpiredStale: Stale
+			ExpiredSedimentary: Sedimentary
+			ExpiredTarnished: Tarnished
+			ExpiredOld: Old
+			Defective: Defective
+			Doubtful: Doubtful
+			Clear: Clear
+			Perfect: Perfect
+			NormalDescription: ""
+			ExpiredFetidDescription: Ugh, what a disgusting mess! Is this even drinkable?!
+			ExpiredStaleDescription: It smells... definitely not like roses.
+			ExpiredSedimentaryDescription:
+				'''
+				Some strange sediment has settled at the bottom. Is that 
+				supposed to happen?
+				'''
+			ExpiredTarnishedDescription: I feel like it should've looked a bit brighter...
+			ExpiredOldDescription:
+				'''
+				They say: 'the longer the wine is aged, the better it gets.' 
+				I wonder if that applies to potions too?
+				'''
+			DefectiveDescription: The alchemist who brewed this clearly wasn't having a good day.
+			DoubtfulDescription: I don't think anyone should expect a 'wow' effect from this.
+			ClearDescription: Crystal clear' but you can tell it could have been better.
+			PerfectDescription: Brewed from the finest ingredients and brought to perfection.
+		}
+
+		Buffs: {
+			Dizziness: {
+				DisplayName: Dizziness
+				Description: Decreased concentration.
+			}
+
+			FlayedSkin: {
+				DisplayName: Flayed Skin
+				Description: You have no skin!
+			}
+
+			Nausea: {
+				DisplayName: Nausea
+				Description: Decreases movement speed.
+			}
+
+			HighTemperature: {
+				DisplayName: High Temperature
+				Description: Mods.RunesMod.Buffs.HighTemperature.Description
+			}
+
+			StoneEntrails: {
+				DisplayName: Stone Entrails
+				Description: Mods.RunesMod.Buffs.StoneEntrails.Description
+			}
+		}
+
+		NPCs: {
+			ABunchOfLife.DisplayName: A bunch of life
+			ABunchOfMana.DisplayName: A bunch of mana
+			Olm.DisplayName: Olm
+			TNP.DisplayName: T N P
+			DeadGuard.DisplayName: Dead Guard
+			DeadGuardHand.DisplayName: Dead Guard Hand
+		}
+
+		Projectiles: {
+			FireBall.DisplayName: Fire ball
+			Stalactite.DisplayName: Stalactite
+			FrostyMist.DisplayName: Frosty Mist
+			Snowflake.DisplayName: Snowflake
+			GlowPowder.DisplayName: Glow Powder
+			GlowingPowder.DisplayName: Glowing Powder
+			LightingProjectile.DisplayName: Lighting Projectile
+			VoidRift.DisplayName: Void Rift
+			WaterSpit.DisplayName: Water Spit
+			LifeCrystalFinder.DisplayName: Life Crystal Finder
+			Tombstone.DisplayName: Tombstone
+			BloodBolt.DisplayName: Blood Bolt
+		}
+
+		Tiles: {
+			Cinnabar.MapEntry: Cinnabar
+			Sulfur.MapEntry: Sulfur
+			RockCrystal.MapEntry: Rock crystal
+			RockCrystalOre.MapEntry: Rock crystal block
+			RockCrystalInStone.MapEntry: Rock crystal in stone
+			Mortar.MapEntry: Mortar
+			ArtifactWorkshop.MapEntry: Artifact Workshop
+			SimpleAlchemicalTable.MapEntry: Simple Alchemical Table
+			Distiller.MapEntry: Distiller
+			StasisChest.MapEntry: Stasis chest
+		}
+
+		Conditions: {
+			Mana: mana
+			Mana1: mana
+		}
+
+		DamageClasses.TrueMagic.DisplayName: True Magic
+
+		Spells: {
+			BloodBoltSpell: {
+				DisplayName: Blood Bolt
+				Tooltip: ""
+			}
+
+			FireShieldSpell: {
+				DisplayName: Fire Shield
+				Tooltip: ""
+			}
+
+			GemsSpell: {
+				DisplayName: Gems
+				Tooltip: ""
+			}
+
+			StalactiteSpell: {
+				DisplayName: Stalactite
+				Tooltip: ""
+			}
+
+			LightingSpell: {
+				DisplayName: Lighting
+				Tooltip: ""
+			}
+
+			FireBallSpell: {
+				DisplayName: Fire Ball
+				Tooltip: ""
+			}
+
+			FrostyBreathSpell: {
+				DisplayName: Frosty Breath
+				Tooltip: ""
+			}
+
+			WaterSpitSpell: {
+				DisplayName: Water Spit
+				Tooltip: ""
+			}
+
+			Spell: {
+				DisplayName: Spell
+				Tooltip: ""
+			}
+
+			TestSpell1: {
+				DisplayName: Test Spell1
+				Tooltip: ""
+			}
+
+			TestSpell2: {
+				DisplayName: Test Spell2
+				Tooltip: ""
+			}
+
+			TestSpell3: {
+				DisplayName: Test Spell3
+				Tooltip: ""
+			}
+
+			TestSpell4: {
+				DisplayName: Test Spell4
+				Tooltip: ""
+			}
+
+			TestSpell5: {
+				DisplayName: Test Spell5
+				Tooltip: ""
+			}
+		}
+	}
+}

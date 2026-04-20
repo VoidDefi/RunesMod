@@ -1,0 +1,222 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Import tModLoader mod properties -->
+	<Import Project="..\tModLoader.targets" />
+
+	<!-- General -->
+	<PropertyGroup>
+		
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Assets\Effects\ColorGradient.fx" />
+	  <None Remove="Assets\Effects\Overlapping.fx" />
+	  <None Remove="Assets\Effects\Shield.fx" />
+	  <None Remove="Assets\Effects\StaticTrail.fx" />
+	  <None Remove="Assets\Effects\Trail.fx" />
+	  <None Remove="Assets\Textures\BallMask.png" />
+	  <None Remove="Assets\Textures\Bestiary\ABunchOfLife.png" />
+	  <None Remove="Assets\Textures\Bestiary\ABunchOfMana.png" />
+	  <None Remove="Assets\Textures\BigLightSphere.png" />
+	  <None Remove="Assets\Textures\Masks\BagBloomMask.png" />
+	  <None Remove="Assets\Textures\Masks\FourPointedStar.png" />
+	  <None Remove="Assets\Textures\Masks\Glare.png" />
+	  <None Remove="Assets\Textures\Masks\MistMask.png" />
+	  <None Remove="Assets\Textures\Masks\StarLight25x25.png" />
+	  <None Remove="Assets\Textures\Noises\Bubbles1Noise.png" />
+	  <None Remove="Assets\Textures\Noises\Bubbles2Noise.png" />
+	  <None Remove="Assets\Textures\Noises\FoamNoise.png" />
+	  <None Remove="Assets\Textures\Noises\PlasmaNoise.png" />
+	  <None Remove="Assets\Textures\Masks\Shields\ShieldCircleGrayMask.png" />
+	  <None Remove="Assets\Textures\Masks\Shields\ShieldCircleMask.png" />
+	  <None Remove="Assets\Textures\Masks\Shields\ShieldSphereMask.png" />
+	  <None Remove="Assets\Textures\Noises\SpaceNoise.png" />
+	  <None Remove="Assets\Textures\Noises\StarsNoise.png" />
+	  <None Remove="Assets\Textures\Noises\WormNoise.png" />
+	  <None Remove="Assets\Textures\Pixel.png" />
+	  <None Remove="Assets\Textures\UI\AlchemySlot.png" />
+	  <None Remove="Assets\Textures\UI\ConcentrationBar\ConcentrationBar.png" />
+	  <None Remove="Assets\Textures\UI\ConcentrationBar\ConcentrationBarBack.png" />
+	  <None Remove="Assets\Textures\UI\ConcentrationBar\ConcentrationBracket.png" />
+	  <None Remove="Assets\Textures\UI\ConcentrationBar\ConcentrationBracketCenter.png" />
+	  <None Remove="Assets\Textures\UI\ConcentrationBar\ConcentrationFrame.png" />
+	  <None Remove="Assets\Textures\UI\ConcentrationBar\ConcentrationFrameOpen.png" />
+	  <None Remove="Assets\Textures\UI\cross.png" />
+	  <None Remove="Assets\Textures\UI\HotbarPanelBottoms.png" />
+	  <None Remove="Assets\Textures\UI\HotbarPanelFillers.png" />
+	  <None Remove="Assets\Textures\UI\Knowledges\BookButton.png" />
+	  <None Remove="Assets\Textures\UI\Knowledges\ButtonBookMark.png" />
+	  <None Remove="Assets\Textures\UI\SimpleAlchemicalTable\Flame.png" />
+	  <None Remove="Assets\Textures\UI\SimpleAlchemicalTable\Highlight.png" />
+	  <None Remove="Assets\Textures\UI\SimpleAlchemicalTable\Liquid.png" />
+	  <None Remove="Assets\Textures\UI\SimpleAlchemicalTable\Table.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellAddButton.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellAddButtonClick.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellButtonHover.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellButtonHoverClick.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellHideButton.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellHideButtonClick.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellShowButton.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellShowButtonClick.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellSubButton.png" />
+	  <None Remove="Assets\Textures\UI\SpellHotBar\SpellSubButtonClick.png" />
+	  <None Remove="Assets\Textures\UI\SpellSlot.png" />
+	  <None Remove="Dusts\CinnabarDust.png" />
+	  <None Remove="Dusts\GlowingPowderDust.png" />
+	  <None Remove="Dusts\SulfurDust.png" />
+	  <None Remove="Gores\Brass\BrassSmall1Gore.png" />
+	  <None Remove="Gores\Brass\BrassSmall2Gore.png" />
+	  <None Remove="Gores\Brass\BrassSmall3Gore.png" />
+	  <None Remove="Gores\Brass\BrassSmall4Gore.png" />
+	  <None Remove="Gores\Brass\Cog1Fragment1Gore.png" />
+	  <None Remove="Gores\Brass\Cog1Fragment2Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardAxeGore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardBone1Fragment1Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardBone1Fragment2Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardBone2Fragment1Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardBone2Fragment2Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardHandGore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardSkull1Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardSkull2Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardSkull3Gore.png" />
+	  <None Remove="Gores\NPCs\Bosses\DeadGuard\DeadGuardSwordGore.png" />
+	  <None Remove="Gores\Shards\LifeShard1Gore.png" />
+	  <None Remove="Gores\Shards\LifeShard2Gore.png" />
+	  <None Remove="Gores\Shards\LifeShard3Gore.png" />
+	  <None Remove="Gores\Shards\LifeShard4Gore.png" />
+	  <None Remove="Gores\Shards\ManaShard1Gore.png" />
+	  <None Remove="Gores\Shards\ManaShard2Gore.png" />
+	  <None Remove="Gores\Shards\ManaShard3Gore.png" />
+	  <None Remove="Gores\Shards\ManaShard4Gore.png" />
+	  <None Remove="Items\Accessories\BloodyPin.png" />
+	  <None Remove="Items\Accessories\BrainOfInfluence.png" />
+	  <None Remove="Items\Accessories\BrainOfInfluence_Face.png" />
+	  <None Remove="Items\Accessories\EternalFlameOfDeath.png" />
+	  <None Remove="Items\Accessories\EternalFlameOfDeath_Glow.png" />
+	  <None Remove="Items\Accessories\HeartOfCthulhu.png" />
+	  <None Remove="Items\Accessories\RuneStone.png" />
+	  <None Remove="Items\Accessories\ShardOfIce.png" />
+	  <None Remove="Items\Accessories\SignOfNature.png" />
+	  <None Remove="Items\Armor\CinnabarBreastplate.png" />
+	  <None Remove="Items\Armor\CinnabarBreastplate_Body.png" />
+	  <None Remove="Items\Armor\CinnabarCrown.png" />
+	  <None Remove="Items\Armor\CinnabarCrown_Face.png" />
+	  <None Remove="Items\Armor\CinnabarLeggings.png" />
+	  <None Remove="Items\Armor\CinnabarLeggings_Legs.png" />
+	  <None Remove="Items\Armor\SulfurBreastplate.png" />
+	  <None Remove="Items\Armor\SulfurBreastplate_Body.png" />
+	  <None Remove="Items\Armor\SulfurHelmet.png" />
+	  <None Remove="Items\Armor\SulfurHelmet_Head.png" />
+	  <None Remove="Items\Armor\SulfurLeggings.png" />
+	  <None Remove="Items\Armor\SulfurLeggings_Legs.png" />
+	  <None Remove="Items\Armor\UniversalRobe.png" />
+	  <None Remove="Items\Armor\UniversalRobe_Body.png" />
+	  <None Remove="Items\Armor\UniversalRobe_Legs.png" />
+	  <None Remove="Items\Artifacts\Blanks\MirrorBlank.png" />
+	  <None Remove="Items\Consumable\Catches\OlmItem.png" />
+	  <None Remove="Items\Consumable\GlowingPowderItem.png" />
+	  <None Remove="Items\Consumable\LifeCrystalFinderItem.png" />
+	  <None Remove="Items\Consumable\LootBoxes\BrokenIceMirror.png" />
+	  <None Remove="Items\Consumable\LootBoxes\BrokenMagicMirror.png" />
+	  <None Remove="Items\Materials\Bars\CinnabarBar.png" />
+	  <None Remove="Items\Materials\Bars\SulfurBar.png" />
+	  <None Remove="Items\Materials\Bars\SulfurBarOld.png" />
+	  <None Remove="Items\Materials\ClearWaterFlask.png" />
+	  <None Remove="Items\Materials\Flask.png" />
+	  <None Remove="Items\Materials\WaterFlask.png" />
+	  <None Remove="Items\Placeables\Bricks\DarkCinnabarBrick.png" />
+	  <None Remove="Items\Placeables\Bricks\LightCinnabarBrick.png" />
+	  <None Remove="Items\Placeables\Bricks\SulfurBrick.png" />
+	  <None Remove="Items\Placeables\CraftStations\ArtifactWorkshopItem.png" />
+	  <None Remove="Items\Placeables\CraftStations\DistillerItem.png" />
+	  <None Remove="Items\Placeables\CraftStations\Mortar.png" />
+	  <None Remove="Items\Placeables\CraftStations\MortarItem.png" />
+	  <None Remove="Items\Placeables\CraftStations\SimpleAlchemicalTableItem.png" />
+	  <None Remove="Items\Placeables\Furniture\StasisChestItem.png" />
+	  <None Remove="Items\Placeables\Ores\CinnabarItem.png" />
+	  <None Remove="Items\Placeables\Ores\RockCrystalInStone.png" />
+	  <None Remove="Items\ScrollFire.png" />
+	  <None Remove="Items\ScrollFrostyBreath.png" />
+	  <None Remove="Items\ScrollLighting.png" />
+	  <None Remove="Items\ScrollWaterSplit.png" />
+	  <None Remove="Items\SlotProtectors\PieceOfWood.png" />
+	  <None Remove="Items\Tools\Pickaxes\CinnabarPickaxe.png" />
+	  <None Remove="Items\Tools\Pickaxes\SulfurPickaxe.png" />
+	  <None Remove="Localization\ru-RU.hjson" />
+	  <None Remove="MagicSchools\AirMagic.png" />
+	  <None Remove="MagicSchools\EarthMagic.png" />
+	  <None Remove="MagicSchools\ElectricMagic.png" />
+	  <None Remove="MagicSchools\Elemental\NatureMagic.png" />
+	  <None Remove="MagicSchools\IceMagic.png" />
+	  <None Remove="NPCs\ABunchOfLife.png" />
+	  <None Remove="NPCs\ABunchOfMana.png" />
+	  <None Remove="NPCs\Bosses\DeadGuard\DeadGuard.png" />
+	  <None Remove="NPCs\Bosses\DeadGuard\DeadGuardBone.png" />
+	  <None Remove="NPCs\Bosses\DeadGuard\DeadGuardHand.png" />
+	  <None Remove="NPCs\Bosses\DeadGuard\DeadGuard_Head_Boss.png" />
+	  <None Remove="NPCs\TNP.png" />
+	  <None Remove="Projectiles\GlowingPowder.png" />
+	  <None Remove="Projectiles\LifeCrystalFinder.png" />
+	  <None Remove="Projectiles\Magic\Blood\BloodBolt.png" />
+	  <None Remove="Projectiles\Magic\Elements\Earth\Gems.png" />
+	  <None Remove="Projectiles\Magic\Elements\Earth\Stalactite.png" />
+	  <None Remove="Projectiles\Magic\Elements\Electric\LightingProjectile.png" />
+	  <None Remove="Projectiles\Magic\Elements\Ice\FrostyMist.png" />
+	  <None Remove="Projectiles\Magic\Elements\Ice\Snowflake.png" />
+	  <None Remove="Projectiles\Magic\Elements\Water\WaterSpit.png" />
+	  <None Remove="Projectiles\VoidRift.png" />
+	  <None Remove="Spells\Blood\BloodBoltSpell.png" />
+	  <None Remove="Spells\Defense\Elements\Fire\FireShieldSpell.png" />
+	  <None Remove="Spells\Elements\Earth\GemsSpell.png" />
+	  <None Remove="Spells\Elements\Earth\StalactiteSpell.png" />
+	  <None Remove="Spells\Elements\Fire\FireBallSpell.png" />
+	  <None Remove="Spells\Elements\Ice\FrostyBreathSpell.png" />
+	  <None Remove="Spells\Elements\Water\WaterSpitSpell.png" />
+	  <None Remove="Spells\FireMagic.png" />
+	  <None Remove="MagicSchools\ElementalMagic.png" />
+	  <None Remove="MagicSchools\WaterMagic.png" />
+	  <None Remove="Spells\Test\TestSpell1.png" />
+	  <None Remove="Spells\Test\TestSpell2.png" />
+	  <None Remove="Spells\Test\TestSpell3.png" />
+	  <None Remove="Spells\Test\TestSpell4.png" />
+	  <None Remove="Spells\Test\TestSpell5.png" />
+	  <None Remove="Tiles\Bars\SulfurBarTile.png" />
+	  <None Remove="Tiles\Blocks\RockCrystalBlock.png" />
+	  <None Remove="Tiles\Bricks\DarkCinnabarBrickTile.png" />
+	  <None Remove="Tiles\Bricks\LightCinnabarBrickTile.png" />
+	  <None Remove="Tiles\Bricks\SulfurBrickTile.png" />
+	  <None Remove="Tiles\CraftStations\ArtifactWorkshop.png" />
+	  <None Remove="Tiles\CraftStations\Distiller.png" />
+	  <None Remove="Tiles\CraftStations\DistillerOld.png" />
+	  <None Remove="Tiles\CraftStations\SimpleAlchemicalTable.png" />
+	  <None Remove="Tiles\CraftStations\SimpleAlchemicalTable_Highlight.png" />
+	  <None Remove="Tiles\Furniture\StasisChest.png" />
+	  <None Remove="Tiles\Ores\Cinnabar.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Remove="Libraries\ModLiquidLib.dll" />
+	</ItemGroup>
+
+	<!-- References -->
+	<ItemGroup>
+	  <Folder Include="Assets\Textures\PotionFlasks\" />
+	  <Folder Include="Items\Placeables\Blocks\" />
+	  <Folder Include="Items\Tools\Hammers\" />
+	  <Folder Include="Items\Tools\Axes\" />
+	  <Folder Include="Items\Tools\Hooks\" />
+	  <Folder Include="Qualities\Ingridients\" />
+	  <Folder Include="Spells\Elements\Air\" />
+	  <Folder Include="Spells\Necromancy\" />
+	  <Folder Include="Tiles\Blocks\" />
+	  <Folder Include="WorldGeneration\Nature\" />
+	  <Folder Include="WorldGeneration\Structures\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="ModLiquidLib">
+	    <HintPath>Libraries\ModLiquidLib.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+	<ItemGroup>
+	  <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+</Project>
