@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using RunesMod.ModUtils;
 
 namespace RunesMod.Graphics
@@ -31,13 +32,20 @@ namespace RunesMod.Graphics
         public override void Load()
         {
             On_Main.Draw_Inner += OnDrawInnerHook;
-            On_Main.DrawProjectiles += OnDrawProjectilesHook;
+            On_Main.DrawDust += OnDrawDustHook;
         }
 
         private void OnDrawInnerHook(On_Main.orig_Draw_Inner original, Main self, GameTime gameTime)
         {
             if (!Main.gameMenu)
             {
+                //F1 - clear dust buffer
+                if (!Main.keyState.IsKeyDown(Keys.F1) && Main.oldKeyState.IsKeyDown(Keys.F1))
+                {
+                    dusts.Clear();
+                    Main.NewText("UnitedDust drawing buffer cleared!", Color.OrangeRed);
+                }
+
                 GraphicsDevice device = Main.graphics.GraphicsDevice;
 
                 foreach (var dustData in dusts)
@@ -68,12 +76,17 @@ namespace RunesMod.Graphics
                         {
                             Dust dust = Main.dust[i];
 
-                            data.definition.Draw(Main.spriteBatch, dust);
+                            if (dust.type == data.definition.Type)
+                            {
+                                data.definition.Draw(Main.spriteBatch, dust);
+                            }
                         }
 
                         //clear current dust
                         data.dusts[i] = false;
                     }
+
+                    data.definition.PostDrawDusts(Main.spriteBatch, data.target);
 
                     //End Drawing Dusts
                     Main.spriteBatch.End();
@@ -85,7 +98,7 @@ namespace RunesMod.Graphics
             original.Invoke(self, gameTime);
         }
 
-        private void OnDrawProjectilesHook(On_Main.orig_DrawProjectiles original, Main self)
+        private void OnDrawDustHook(On_Main.orig_DrawDust original, Main self)
         {
             original.Invoke(self);
 

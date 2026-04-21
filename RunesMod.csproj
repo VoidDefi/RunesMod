@@ -13,6 +13,7 @@
 	  <None Remove="Assets\Effects\Shield.fx" />
 	  <None Remove="Assets\Effects\StaticTrail.fx" />
 	  <None Remove="Assets\Effects\Trail.fx" />
+	  <None Remove="Assets\Effects\Water.fx" />
 	  <None Remove="Assets\Textures\BallMask.png" />
 	  <None Remove="Assets\Textures\Bestiary\ABunchOfLife.png" />
 	  <None Remove="Assets\Textures\Bestiary\ABunchOfMana.png" />

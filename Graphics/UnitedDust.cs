@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Options;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using RunesMod.ModUtils;
@@ -44,6 +45,11 @@ namespace RunesMod.Graphics
         public virtual RenderTarget2D CreateRenderTarget()
         {
             return null;
+        }
+
+        public virtual void PostDrawDusts(SpriteBatch spriteBatch, RenderTarget2D target)
+        {
+
         }
 
         public virtual DrawingData? GetDustDrawingData()
