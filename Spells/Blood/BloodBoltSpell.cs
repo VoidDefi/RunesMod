@@ -23,8 +23,8 @@ namespace RunesMod.Spells.Blood
             animationStyle = CastingAnimationLoader.AnimationType<PushAnimation>();
 
             projectileType = ModContent.ProjectileType<BloodBolt>();
-            projectileSpeed = 18f / 2;
-            damage = 30;
+            projectileSpeed = 6f;
+            damage = 40;
             knockBack = 4.5f;
 
             AddMagicSchool<BloodMagic>();

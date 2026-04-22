@@ -8,6 +8,7 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Assets\Effects\Blood.fx" />
 	  <None Remove="Assets\Effects\ColorGradient.fx" />
 	  <None Remove="Assets\Effects\Overlapping.fx" />
 	  <None Remove="Assets\Effects\Shield.fx" />
@@ -30,6 +31,8 @@
 	  <None Remove="Assets\Textures\Masks\Shields\ShieldCircleGrayMask.png" />
 	  <None Remove="Assets\Textures\Masks\Shields\ShieldCircleMask.png" />
 	  <None Remove="Assets\Textures\Masks\Shields\ShieldSphereMask.png" />
+	  <None Remove="Assets\Textures\Noises\SimpleBubbleNoise0.png" />
+	  <None Remove="Assets\Textures\Noises\SimpleBubbleNoise1.png" />
 	  <None Remove="Assets\Textures\Noises\SpaceNoise.png" />
 	  <None Remove="Assets\Textures\Noises\StarsNoise.png" />
 	  <None Remove="Assets\Textures\Noises\WormNoise.png" />

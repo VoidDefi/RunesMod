@@ -5,23 +5,22 @@ using RunesMod.ModUtils;
 using Terraria;
 using Terraria.ID;
 using System;
-using Terraria.DataStructures;
 
 namespace RunesMod.Dusts.UnitedDusts
 {
-    public class WaterDust : UnitedDust
+    public class BloodDust : UnitedDust
     {
         private static readonly AutoAsset<Texture2D> circle = new AutoAsset<Texture2D>(ModAssets.Textures, "Circle");
 
         private static RenderTarget2D pixelTarget = null;
 
-        private static Vector4 MainColor => new Color(31, 90, 230).ToVector4() * 1.7f;
+        private static Vector4 MainColor => new Color(201, 0, 0).ToVector4() * 1.7f;
 
-        private static Vector4 ShadowColor => new Color(0, 12, 59).ToVector4() * 1.5f;
+        private static Vector4 ShadowColor => new Color(42, 0, 0).ToVector4() * 0.5f;
 
-        private static Vector4 FoamColor => new Color(125, 200, 255).ToVector4() * 5;
+        private static Vector4 LightColor => new Color(255, 47, 47).ToVector4() * 4;
 
-        private static float OutlineFactor => 0.4f;
+        private static float OutlineFactor => 0.2f;
 
         public override void SetStaticDefaults()
         {
@@ -52,7 +51,12 @@ namespace RunesMod.Dusts.UnitedDusts
 
         public override void Draw(SpriteBatch spriteBatch, Dust dust)
         {
-            Lighting.AddLight(dust.position, ShadowColor.X, ShadowColor.Y, ShadowColor.Z);
+            if (!dust.noLight)
+            {
+                float factor = 10f * Math.Clamp(dust.scale, 0.01f, 1f);
+
+                Lighting.AddLight(dust.position, ShadowColor.X * factor, ShadowColor.Y * factor, ShadowColor.Z * factor);
+            }
 
             Vector2 defaultScale = new Vector2(1 - Math.Clamp(dust.velocity.Length() / 10, 0f, 0.8f), 1 + dust.velocity.Length() / 2);
             //Vector2 defaultScale = Vector2.One;
@@ -91,25 +95,16 @@ namespace RunesMod.Dusts.UnitedDusts
 
             float targetScale = 2f * Main.GameZoomTarget;
 
-            /*
-            const float circleDot = 0.70711f;
+            Effect bloodEffect = ModAssets.Request<Effect>(ModAssets.Effects, "Blood").Value;
+            Texture2D shadowTexture = ModAssets.Request<Texture2D>(ModAssets.NoiseTextures, "WormNoise").Value;
+            Texture2D lightTexture = ModAssets.Request<Texture2D>(ModAssets.NoiseTextures, "SimpleBubbleNoise0").Value;
 
-            spriteBatch.Draw(pixelTarget, Vector2.One * -circleDot * scale, outlineColor, targetScale);
-            spriteBatch.Draw(pixelTarget, new Vector2(1, -1) * circleDot * scale, outlineColor, targetScale);
-            spriteBatch.Draw(pixelTarget, new Vector2(-1, 1) * circleDot * scale, outlineColor, targetScale);
-            spriteBatch.Draw(pixelTarget, Vector2.One * circleDot * scale, outlineColor, targetScale);
-            */
+            bloodEffect.Parameters["color"]?.SetValue(MainColor * OutlineFactor);
+            bloodEffect.Parameters["shadowColor"]?.SetValue(ShadowColor * OutlineFactor);
+            bloodEffect.Parameters["lightColor"]?.SetValue(LightColor * OutlineFactor);
 
-            Effect waterEffect = ModAssets.Request<Effect>(ModAssets.Effects, "Water").Value;
-            Texture2D shadowTexture = ModAssets.Request<Texture2D>(ModAssets.NoiseTextures, "Bubbles1Noise").Value;
-            Texture2D foamTexture = ModAssets.Request<Texture2D>(ModAssets.NoiseTextures, "FoamNoise").Value;
-
-            waterEffect.Parameters["color"]?.SetValue(MainColor * OutlineFactor);
-            waterEffect.Parameters["shadowColor"]?.SetValue(ShadowColor * OutlineFactor);
-            waterEffect.Parameters["foamColor"]?.SetValue(FoamColor * OutlineFactor);
-
-            waterEffect.Parameters["time"]?.SetValue((float)Main.gameTimeCache.TotalGameTime.TotalSeconds / 4f);
-            waterEffect.Parameters["size"]?.SetValue(Main.ScreenSize.ToVector2());
+            bloodEffect.Parameters["time"]?.SetValue((float)Main.gameTimeCache.TotalGameTime.TotalSeconds / 4f);
+            bloodEffect.Parameters["size"]?.SetValue(Main.ScreenSize.ToVector2());
 
             spriteBatch.End();
 
@@ -117,11 +112,11 @@ namespace RunesMod.Dusts.UnitedDusts
 
             device.Textures[1] = shadowTexture;
             device.SamplerStates[1] = SamplerState.LinearWrap;
-            device.Textures[2] = foamTexture;
+            device.Textures[2] = lightTexture;
             device.SamplerStates[2] = SamplerState.LinearWrap;
 
             DrawingData data = GetCanvasDrawingData() ?? new DrawingData(samplerState: SamplerState.PointClamp);
-            data.Effect = waterEffect;
+            data.Effect = bloodEffect;
             data.Begin(spriteBatch);
 
             spriteBatch.Draw(pixelTarget, Vector2.UnitX * -1 * scale, Color.White, targetScale);
@@ -131,9 +126,9 @@ namespace RunesMod.Dusts.UnitedDusts
 
             spriteBatch.End();
 
-            waterEffect.Parameters["color"]?.SetValue(MainColor);
-            waterEffect.Parameters["shadowColor"]?.SetValue(ShadowColor);
-            waterEffect.Parameters["foamColor"]?.SetValue(FoamColor);
+            bloodEffect.Parameters["color"]?.SetValue(MainColor);
+            bloodEffect.Parameters["shadowColor"]?.SetValue(ShadowColor);
+            bloodEffect.Parameters["lightColor"]?.SetValue(LightColor);
 
             data.Begin(spriteBatch);
 

@@ -16,6 +16,7 @@ using RunesMod.ModUtils;
 using RunesMod.MagicSchools.Elemental;
 using RunesMod.DamageClasses;
 using RunesMod.MagicSchools.Other;
+using RunesMod.Dusts.UnitedDusts;
 
 namespace RunesMod.Projectiles.Magic.Blood
 {
@@ -56,8 +57,11 @@ namespace RunesMod.Projectiles.Magic.Blood
 
         public override void AI()
         {
-            float brightness = Math.Clamp(Projectile.velocity.Length(), 0f, 1f);
-            Lighting.AddLight(Projectile.Center, 1f * brightness, 0f, 0f);
+            //float brightness = Math.Clamp(Projectile.velocity.Length(), 0f, 1f);
+            //Lighting.AddLight(Projectile.Center, 1f * brightness, 0f, 0f);
+
+            Dust dust = Main.dust[Dust.NewDust(Projectile.Center, 0, 0, ModContent.DustType<BloodDust>(), Projectile.velocity.X / 1.2f, Projectile.velocity.Y / 1.2f)];
+            dust.noGravity = true;
 
             Projectile.netUpdate = true;
 
@@ -68,7 +72,7 @@ namespace RunesMod.Projectiles.Magic.Blood
 
             else
             {
-                Projectile.velocity *= 0.8f;
+                Projectile.velocity *= 0.7f;
 
                 if (Projectile.velocity.Length() < 0.00001f)
                     Projectile.Kill();
@@ -116,7 +120,7 @@ namespace RunesMod.Projectiles.Magic.Blood
         int timer;
         public override bool PreDraw(ref Color lightColor)
         {
-            Vector4 screenRectangle = new Vector4(0, 0, Main.Camera.ScaledSize.X, Main.Camera.ScaledSize.Y);
+            /*Vector4 screenRectangle = new Vector4(0, 0, Main.Camera.ScaledSize.X, Main.Camera.ScaledSize.Y);
 
             MiscShaderData trailShader = GameShaders.Misc["RunesMod:Trail"];
 
@@ -136,7 +140,7 @@ namespace RunesMod.Projectiles.Magic.Blood
             Main.pixelShader.CurrentTechnique.Passes[0].Apply();
 
             timer++;
-
+            */
             return true;
         }
 
