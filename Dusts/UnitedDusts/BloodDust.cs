@@ -53,7 +53,7 @@ namespace RunesMod.Dusts.UnitedDusts
         {
             if (!dust.noLight)
             {
-                float factor = 10f * Math.Clamp(dust.scale, 0.01f, 1f);
+                float factor = 4f * Math.Clamp(dust.scale, 0.01f, 1f);
 
                 Lighting.AddLight(dust.position, ShadowColor.X * factor, ShadowColor.Y * factor, ShadowColor.Z * factor);
             }

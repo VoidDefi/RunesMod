@@ -24,7 +24,7 @@ namespace RunesMod.Spells.Blood
 
             projectileType = ModContent.ProjectileType<BloodBolt>();
             projectileSpeed = 6f;
-            damage = 40;
+            damage = 50;
             knockBack = 4.5f;
 
             AddMagicSchool<BloodMagic>();
