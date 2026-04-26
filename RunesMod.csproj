@@ -161,6 +161,7 @@
 	  <None Remove="Projectiles\GlowingPowder.png" />
 	  <None Remove="Projectiles\LifeCrystalFinder.png" />
 	  <None Remove="Projectiles\Magic\Blood\BloodBolt.png" />
+	  <None Remove="Projectiles\Magic\Blood\BloodScythe.png" />
 	  <None Remove="Projectiles\Magic\Elements\Earth\Gems.png" />
 	  <None Remove="Projectiles\Magic\Elements\Earth\Stalactite.png" />
 	  <None Remove="Projectiles\Magic\Elements\Electric\LightingProjectile.png" />
@@ -169,6 +170,7 @@
 	  <None Remove="Projectiles\Magic\Elements\Water\WaterSpit.png" />
 	  <None Remove="Projectiles\VoidRift.png" />
 	  <None Remove="Spells\Blood\BloodBoltSpell.png" />
+	  <None Remove="Spells\Blood\BloodScytheSpell.png" />
 	  <None Remove="Spells\Defense\Elements\Fire\FireShieldSpell.png" />
 	  <None Remove="Spells\Elements\Earth\GemsSpell.png" />
 	  <None Remove="Spells\Elements\Earth\StalactiteSpell.png" />

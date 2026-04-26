@@ -377,6 +377,7 @@ Mods: {
 			// LifeCrystalFinder.DisplayName: Life Crystal Finder
 			// Tombstone.DisplayName: Tombstone
 			// BloodBolt.DisplayName: Blood Bolt
+			// BloodScythe.DisplayName: Blood Scythe
 		}
 
 		Tiles: {
@@ -468,6 +469,11 @@ Mods: {
 			TestSpell5: {
 				DisplayName: Test Spell5
 				Tooltip: ""
+			}
+
+			BloodScytheSpell: {
+				// DisplayName: Blood Scythe Spell
+				// Tooltip: ""
 			}
 		}
 	}

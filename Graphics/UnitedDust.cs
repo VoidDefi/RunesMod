@@ -8,12 +8,15 @@ using RunesMod.ModUtils;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace RunesMod.Graphics
 {
     public abstract class UnitedDust : ModDust
     {
         public override string Texture => "RunesMod/Dusts/InvisibleDust";
+
+        private readonly List<IUnitedDustDrawer> drawers = new List<IUnitedDustDrawer>();
 
         public sealed override bool Update(Dust dust)
         {
@@ -60,6 +63,26 @@ namespace RunesMod.Graphics
         public virtual DrawingData? GetCanvasDrawingData()
         {
             return null;
+        }
+
+        public void AddDrawer(IUnitedDustDrawer drawer)
+        {
+            drawers.Add(drawer);
+
+            UnitedDustDrawing.TryInitDustData(this);
+        }
+
+        public void StartDrawers(SpriteBatch spriteBatch, RenderTarget2D target)
+        {
+            foreach (IUnitedDustDrawer drawer in drawers)
+            {
+                drawer.PostDrawUnitedDusts(spriteBatch, target);
+            }
+        }
+
+        public void ClearDrawers()
+        {
+            drawers.Clear();
         }
     }
 }

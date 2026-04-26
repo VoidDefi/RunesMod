@@ -36,6 +36,10 @@ namespace RunesMod.Items
 
             player.KnowledgeSystem().Learning(spell);
 
+            SpellKnowledge spell1 = new(SpellLoader.GetSpell<BloodScytheSpell>());
+
+            player.KnowledgeSystem().Learning(spell1);
+
             return true;
         }
     }

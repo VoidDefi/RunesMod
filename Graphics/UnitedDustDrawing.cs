@@ -86,6 +86,9 @@ namespace RunesMod.Graphics
                         data.dusts[i] = false;
                     }
 
+                    data.definition.StartDrawers(Main.spriteBatch, data.target);
+                    data.definition.ClearDrawers();
+
                     data.definition.PostDrawDusts(Main.spriteBatch, data.target);
 
                     //End Drawing Dusts
@@ -136,6 +139,14 @@ namespace RunesMod.Graphics
             }
 
             else
+            {
+                TryInitDustData(definition);
+            }
+        }
+
+        public static void TryInitDustData(UnitedDust definition)
+        {
+            if (!dusts.ContainsKey(definition.Type))
             {
                 RenderTarget2D target = null;
                 RenderTarget2D customTarget = definition.CreateRenderTarget();
