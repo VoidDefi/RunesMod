@@ -155,9 +155,15 @@ namespace RunesMod.Systems
             Item slotProtector = Player.HeldItem.ModItem is SlotProtector ? Player.HeldItem : null;
             bool canUseSpell = !Player.HeldItem.active || slotProtector != null;
 
+            if (slotProtector == null)
+            {
+                slotProtector = new Item();
+                slotProtector.SetDefaults(ModContent.ItemType<NoneProtector>());
+            }
+
             SlotProtector protector = slotProtector?.ModItem as SlotProtector;
 
-            if (Player.ItemTimeIsZero && canUseSpell && protector?.CanUseSpell(Player, spell) == true)
+            if (Player.ItemTimeIsZero && canUseSpell && (protector?.CanUseSpell(Player, spell) == true))
             {
                 if (spell == null) return false;
                 if (!spell.IsInitialize)
@@ -206,12 +212,6 @@ namespace RunesMod.Systems
                 }
 
                 else return false;
-
-                if (slotProtector == null)
-                {
-                    slotProtector = new Item();
-                    slotProtector.SetDefaults(ModContent.ItemType<NoneProtector>());
-                }
 
                 Item itemCrutch = spell.GetCrutchItem(slotProtector);
                 Player.ApplyItemTime(itemCrutch);

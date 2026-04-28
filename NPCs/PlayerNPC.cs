@@ -109,7 +109,6 @@ namespace RunesMod.NPCs
         {
             player.direction = NPC.direction;
             player.velocity = NPC.velocity;
-
         }
 
         public sealed override void OnKill()

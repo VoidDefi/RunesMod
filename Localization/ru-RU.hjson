@@ -362,6 +362,7 @@ Mods: {
 			TNP.DisplayName: ТНП
 			// DeadGuard.DisplayName: Dead Guard
 			// DeadGuardHand.DisplayName: Dead Guard Hand
+			// Ghost.DisplayName: Ghost
 		}
 
 		Projectiles: {

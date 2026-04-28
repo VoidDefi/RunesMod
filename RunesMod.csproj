@@ -12,6 +12,7 @@
 	  <None Remove="Assets\Effects\ColorGradient.fx" />
 	  <None Remove="Assets\Effects\Overlapping.fx" />
 	  <None Remove="Assets\Effects\Shield.fx" />
+	  <None Remove="Assets\Effects\Spirit.fx" />
 	  <None Remove="Assets\Effects\StaticTrail.fx" />
 	  <None Remove="Assets\Effects\Trail.fx" />
 	  <None Remove="Assets\Effects\Water.fx" />
@@ -157,6 +158,7 @@
 	  <None Remove="NPCs\Bosses\DeadGuard\DeadGuardBone.png" />
 	  <None Remove="NPCs\Bosses\DeadGuard\DeadGuardHand.png" />
 	  <None Remove="NPCs\Bosses\DeadGuard\DeadGuard_Head_Boss.png" />
+	  <None Remove="NPCs\Ghost.png" />
 	  <None Remove="NPCs\TNP.png" />
 	  <None Remove="Projectiles\GlowingPowder.png" />
 	  <None Remove="Projectiles\LifeCrystalFinder.png" />
