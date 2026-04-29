@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using RunesMod.Cooldowns;
 using RunesMod.Items.SlotProtectors;
 using RunesMod.MagicSchools;
 using RunesMod.MagicSchools.Other;
@@ -15,6 +16,7 @@ using RunesMod.Spells.Test;
 using RunesMod.UI;
 using RunesMod.UI.States;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Terraria;
@@ -117,7 +119,7 @@ namespace RunesMod.Systems
 
             notUseSpellTimer++;
 
-            if (Main.mouseLeft)
+            if (Main.mouseLeft && Player.controlUseItem)
             {
                 SpellHotBar hotBar = UIManager.GetUserInterface(SpellHotBar.SpellHotBarInterface).CurrentState as SpellHotBar;
                 Spell spell = hotBar.GetSpell();
@@ -126,24 +128,21 @@ namespace RunesMod.Systems
             }
         }
 
+        public override void UpdateDead()
+        {
+            concentration.ClearSlots();
+            bloodLevel = 0;
+            maxCurrentBloodLevel = 100f;
+            notUseSpellTimer = 60 * 10;
+        }
+
         public bool TryCastSpell(Spell spell)
         {
             if (spell == null) return false;
 
-            if (Player.dead)
-            {
-                concentration.ClearSlots();
-                bloodLevel = 0;
-                maxCurrentBloodLevel = 100f;
-                notUseSpellTimer = 60 * 10;
-            }
+            notUseSpellTimer = 0;
 
-            else
-            {
-                notUseSpellTimer = 0;
-            }
-
-            if (Player.dead || Player.CCed || !Player.controlUseItem) return false;
+            if (Player.dead || Player.CCed) return false;
 
             //*
             for (int i = 0; i < SpellLoader.spells.Count; i++)
@@ -181,6 +180,25 @@ namespace RunesMod.Systems
 
                 if (!spell.CanCasting(Player, velocity))
                     return false;
+
+                List<Cooldown> cooldowns = Player.CooldownSystem().Cooldowns;
+
+                if (cooldowns != null)
+                {
+                    int index = cooldowns.FindIndex(cooldown =>
+                    { 
+                        if(cooldown is ShieldCooldown)
+                        {
+                            ShieldCooldown shieldCooldown = cooldown as ShieldCooldown;
+
+                            return shieldCooldown.Shield?.Spell?.Type == spell.Type;
+                        }
+
+                        return false;
+                    });
+
+                    if (index >= 0) return false;
+                }
 
                 if (spell.sustainable && spell.occupiedSlotLength > 0)
                 {

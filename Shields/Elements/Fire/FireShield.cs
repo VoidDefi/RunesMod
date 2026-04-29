@@ -21,6 +21,7 @@ namespace RunesMod.Shields.Elements.Fire
         {
             maxStrength = 50;
             destroyable = true;
+            cooldownTime = 30 * 60;
         }
 
         public override void ModifyHurt(ref Player.HurtModifiers hurt, ref int damage)

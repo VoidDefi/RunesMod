@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
+using RunesMod.Cooldowns;
 using RunesMod.ModUtils;
 using RunesMod.Shields;
 using RunesMod.Spells;
@@ -130,6 +131,11 @@ namespace RunesMod.Systems
                     if (shield.strength <= 0 && shield.destroyable)
                     {
                         shield.Destroy();
+
+                        ShieldCooldown cooldown = new();
+                        cooldown.Shield = shield;
+
+                        Player.CooldownSystem().Add(cooldown);
 
                         if (shield.Spell != null)
                         {

@@ -12,7 +12,7 @@ using Terraria.ModLoader;
 using Terraria;
 using RunesMod.Tiles.CraftStations;
 
-namespace RunesMod.Items.Artifacts.Blanks
+namespace RunesMod.Items.ArtifactItems.Blanks
 {
     public class MirrorBlank : ModItem
     {

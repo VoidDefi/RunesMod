@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
 using RunesMod.Tiles.CraftStations;
-using RunesMod.Items.Artifacts.Blanks;
+using RunesMod.Items.ArtifactItems.Blanks;
 
 namespace RunesMod.Systems
 {

@@ -44,6 +44,11 @@ namespace RunesMod.ModUtils
             return player.GetModPlayer<KnowledgeSystem>();
         }
 
+        public static CooldownSystem CooldownSystem(this Player player)
+        {
+            return player.GetModPlayer<CooldownSystem>();
+        }
+
         #endregion
 
         public static bool ConsumeMana(this Player player, int amount, bool pay = true, bool blockQuickMana = false)

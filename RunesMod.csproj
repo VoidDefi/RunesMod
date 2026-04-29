@@ -116,7 +116,7 @@
 	  <None Remove="Items\Armor\UniversalRobe.png" />
 	  <None Remove="Items\Armor\UniversalRobe_Body.png" />
 	  <None Remove="Items\Armor\UniversalRobe_Legs.png" />
-	  <None Remove="Items\Artifacts\Blanks\MirrorBlank.png" />
+	  <None Remove="Items\ArtifactItems\Blanks\MirrorBlank.png" />
 	  <None Remove="Items\Consumable\Catches\OlmItem.png" />
 	  <None Remove="Items\Consumable\GlowingPowderItem.png" />
 	  <None Remove="Items\Consumable\LifeCrystalFinderItem.png" />
