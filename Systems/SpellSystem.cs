@@ -83,23 +83,6 @@ namespace RunesMod.Systems
             {
                 hotBar.ClearSlots();
                 hotBar.HoldIndex = null;
-
-                /*
-                hotBar.AddSlot(SpellLoader.GetSpell<FireBallSpell>());
-                hotBar.AddSlot(SpellLoader.GetSpell<FireShieldSpell>());
-                hotBar.AddSlot(SpellLoader.GetSpell<StalactiteSpell>());
-                hotBar.AddSlot(SpellLoader.GetSpell<FrostyBreathSpell>());
-                hotBar.AddSlot(SpellLoader.GetSpell<LightingSpell>());
-                hotBar.AddSlot(SpellLoader.GetSpell<WaterSpitSpell>());
-                */
-
-                /*
-                hotBar.AddSlot(SpellLoader.GetSpell<TestSpell1>());
-                hotBar.AddSlot(SpellLoader.GetSpell<TestSpell2>());
-                hotBar.AddSlot(SpellLoader.GetSpell<TestSpell3>());
-                hotBar.AddSlot(SpellLoader.GetSpell<TestSpell4>());
-                hotBar.AddSlot(SpellLoader.GetSpell<TestSpell5>());
-                */
             }
         }
 

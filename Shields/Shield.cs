@@ -44,6 +44,7 @@ namespace RunesMod.Shields
 
         protected override void Register()
         {
+            Type = (short)ShieldLoader.ReserveShieldID();
             ModTypeLookup<Shield>.Register(this);
 
             ShieldLoader.AddShield(GetType());

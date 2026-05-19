@@ -1,5 +1,6 @@
 ﻿using RunesMod.ModUtils;
 using RunesMod.Spells;
+using RunesMod.Spells.Defense.Elements.Water;
 using RunesMod.Spells.Elements.Electric;
 using RunesMod.Spells.Elements.Fire;
 using RunesMod.Spells.Elements.Ice;
@@ -34,6 +35,9 @@ namespace RunesMod.Items
             SpellKnowledge spell = new(SpellLoader.GetSpell<WaterSpitSpell>());
 
             player.KnowledgeSystem().Learning(spell);
+
+            SpellKnowledge spell1 = new(SpellLoader.GetSpell<WaterShieldSpell>());
+            player.KnowledgeSystem().Learning(spell1);
 
             return true;
         }

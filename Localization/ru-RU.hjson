@@ -476,6 +476,11 @@ Mods: {
 				// DisplayName: Blood Scythe Spell
 				// Tooltip: ""
 			}
+
+			WaterShieldSpell: {
+				// DisplayName: Water Shield Spell
+				// Tooltip: ""
+			}
 		}
 	}
 }

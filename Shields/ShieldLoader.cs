@@ -16,10 +16,11 @@ namespace RunesMod.Shields
 
         public static int ShieldCount => nextShield;
 
-        internal static int ReserveShieldID()
+        internal static int ReserveShieldID(bool increase = true)
         {
             int reserveID = nextShield;
-            nextShield++;
+            if (increase) nextShield++;
+
             return reserveID;
         }
 
@@ -44,7 +45,7 @@ namespace RunesMod.Shields
             if (!type.IsSubclassOf(typeof(Shield)))
                 throw new ArgumentException();
 
-            short shieldType = (short)ReserveShieldID();
+            short shieldType = (short)ReserveShieldID(false);
 
             shields.Add((type, shieldType));
         }

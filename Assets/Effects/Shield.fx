@@ -39,7 +39,7 @@ float4 PixelMain(float2 texCoord : TEXCOORD0) : COLOR0
     if (length(texCoord * 2. - 1.) <= 1)
     {
         circleAlpha = tex2D(SpriteTextureSampler, texCoord).r * uCircleFactor;
-        noiseAlpha = tex2D(uNoiseSampler, spherePos + uNoiseMoveDirection).r * uNoiseFactor;
+        noiseAlpha = tex2D(uNoiseSampler, (spherePos + uNoiseMoveDirection) * uNoiseSize).r * uNoiseFactor;
     }
     
     float4 color = (clamp(noiseAlpha + circleAlpha, 0., 1.)).xxxx;
